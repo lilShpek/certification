@@ -1,15 +1,13 @@
-# # Номер 10
-# a = input('Монеты вверх гербом:' )
-# b = input('Монеты вверх решкой:')
-# a = int(a)
-# b = int(b)
-# n = a+b
-# min = 0
-# if a>b:
-#     min = n-a
-# else:
-#     min = n-b
-# print(min)
+#Номер 10
+coins = input("Введите строку монет: ")
+coins_orel = coins.count('O')
+coins_reshka = coins.count('R')
+if coins_orel>coins_reshka:
+    print(f"Монет нужно перевернуть: {coins_reshka}")
+elif coins_orel<coins_reshka:
+    print(f"Монет нужно перевернуть: {coins_orel}")
+else:
+    print("Количество монет с орлом и решкой равно")
 
 #Номер 12
 # S = int(input("Введите сумму S: "))
