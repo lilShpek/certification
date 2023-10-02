@@ -30,14 +30,14 @@
 # Напишите программу для нахождения максимального числа ягод, которое может собрать за один заход собирающий модуль, находясь перед некоторым кустом заданной во входном файле грядки.
 
 
-# n = int(input('Введите количество куство с ягодами: '))
-# berries = list(map(int, input('Введите количество ягод на каждом кусте через пробел: ').split()))
-# berry_sums = []
-# for i in range(n):
-#     sum_berries = berries[i] + berries[(i-1) % n] + berries[(i + 1) % n]
-#     berry_sums.append(sum_berries)
-# max_berries = max(berry_sums)
-# print("Максимальное количество собранных ягод:", max_berries)
+n = int(input('Введите количество куство с ягодами: '))
+berries = list(map(int, input('Введите количество ягод на каждом кусте через пробел: ').split()))
+berry_sums = []
+for i in range(n):
+    sum_berries = berries[i] + berries[(i-1) % n] + berries[(i + 1) % n]
+    berry_sums.append(sum_berries)
+max_berries = max(berry_sums)
+print("Максимальное количество собранных ягод:", max_berries)
 
     
 
