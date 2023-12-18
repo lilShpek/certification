@@ -1,0 +1,12 @@
+INFO:string:Инициализирован объект MyString для автора 'vasia' в 2023-12-18 19:36:04.109209
+INFO:string:Установлено значение для MyString: 09
+INFO:string:Объект MyString успешно создан: MyString(author=vasia, value=09, create_time=2023-12-18 19:36:04.109209)
+INFO:string:Программа выведет значение: 09
+INFO:string:Инициализирован объект MyString для автора 'vasia' в 2023-12-18 19:36:30.956412
+INFO:string:Установлено значение для MyString: ffd
+INFO:string:Объект MyString успешно создан: MyString(author=vasia, value=ffd, create_time=2023-12-18 19:36:30.956412)
+INFO:string:Программа выведет значение: ffd
+INFO:string:Инициализирован объект MyString для автора '11' в 2023-12-18 19:36:42.620968
+INFO:string:Установлено значение для MyString: ffd
+INFO:string:Объект MyString успешно создан: MyString(author=11, value=ffd, create_time=2023-12-18 19:36:42.620968)
+INFO:string:Программа выведет значение: ffd

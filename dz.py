@@ -1,33 +1,34 @@
-# Номер 10
-# coins = input("Введите строку монет: ")
-# coins_orel = coins.count('O')
-# coins_reshka = coins.count('R')
-# if coins_orel>coins_reshka:
-#     print(f"Монет нужно перевернуть: {coins_reshka}")
-# elif coins_orel<coins_reshka:
-#     print(f"Монет нужно перевернуть: {coins_orel}")
-# else:
-#     print("Количество монет с орлом и решкой равно")
+def is_valid_date(date_str):
+    try:
+        day, month, year = map(int, date_str.split('.'))
+        
+        if month < 1 or month > 12:
+            return False
+        
+        if month in [1, 3, 5, 7, 8, 10, 12]:
+            if day < 1 or day > 31:
+                return False
+        elif month in [4, 6, 9, 11]:
+            if day < 1 or day > 30:
+                return False
+        else:
+            if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+                if day < 1 or day > 29:
+                    return False
+            else:
+                if day < 1 or day > 28:
+                    return False
+        
+        return True
+    except (ValueError, IndexError):
+        return False
 
-#Номер 12
-# S = int(input("Введите сумму S: "))
-# P = int(input("Введите произведение P: "))
-# for x in range(1, 1001):
-#     y = S - x
-#     if x*y == P:
-#         print(f"Числа x и y: {x}, {y}")
-#         break   
-# else: 
-#     print("Нет действительных значений x и y")
+# Пример использования
+date_to_prove = "15.4.2023"
+result = is_valid_date(date_to_prove)
+print(result)  # Выведет True
 
-#Номер 14
-# n = int(input())
-# a = 0
-# c = 1
-# while c<=n:
-#     print(c, end=' ')
-#     a += 1
-#     c = 2**a
-# print()
+date_to_prove = '0.5.2022'
+result = is_valid_date(date_to_prove)
+print(result)  # Выведет False
 
-# @klordoo
