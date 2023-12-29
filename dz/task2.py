@@ -11,7 +11,7 @@ def greet():
     username = request.form['username']
     email = request.form['email']
 
-    # Создаем cookie с данными пользователя
+    
     response = make_response(render_template('greet.html', username=username))
     response.set_cookie('user_data', f'{username},{email}')
     
@@ -19,7 +19,7 @@ def greet():
 
 @app.route('/logout/')
 def logout():
-    # Удаляем cookie с данными пользователя
+    
     response = make_response(redirect(url_for('index')))
     response.delete_cookie('user_data')
     
