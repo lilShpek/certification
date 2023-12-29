@@ -1,25 +1,25 @@
-# Создать страницу, на которой будет кнопка "Нажми меня", 
-# при нажатии на которую будет переход на другую страницу
-# с приветствием пользователя по имени.
+Создать страницу, на которой будет кнопка "Нажми меня", 
+при нажатии на которую будет переход на другую страницу
+с приветствием пользователя по имени.
 
 
-# from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 
 
-# app = Flask(__name__)
+app = Flask(__name__)
 
-# @app.route('/')
-# def index():
-#     return render_template('index.html')
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 
-# @app.route('/greet', methods=['POST'])
-# def greet():
-#     username = request.form['username']
-#     return render_template('greet.html', username=username)
+@app.route('/greet', methods=['POST'])
+def greet():
+    username = request.form['username']
+    return render_template('greet.html', username=username)
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
 
 
 
