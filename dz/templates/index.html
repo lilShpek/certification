@@ -4,30 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Online Store</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Flask Cookie Example</title>
 </head>
 
 <body>
-    <header>
-        <h1>Your Online Store</h1>
-    </header>
-
-    <nav>
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('clothing') }}">Clothing</a>
-        <a href="{{ url_for('jacket') }}">Jacket</a>
-        <a href="{{ url_for('shoes') }}">Shoes</a>
-    </nav>
-
-    <div class="content">
-        <h2>Welcome to Your Online Store!</h2>
-        <p>Explore our collection of clothing, jackets, and shoes.</p>
-    </div>
-
-    <footer>
-        <p>&copy; 2023 Your Online Store. All rights reserved.</p>
-    </footer>
+    <h1>Введите ваше имя и электронную почту</h1>
+    <form action="{{ url_for('greet') }}" method="post">
+        <label for="username">Имя:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Отправить</button>
+    </form>
 </body>
 
 </html>
