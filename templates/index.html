@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <!-- Вставьте любые стили или скрипты, которые вам нужны -->
+</head>
+<body>
+
+<h1>Registration Form</h1>
+
+<form method="POST" action="{{ url_for('register') }}">
+    {{ form.hidden_tag() }}
+    
+    <label for="name">Name:</label>
+    {{ form.name() }}
+    <br>
+
+    <label for="surname">Surname:</label>
+    {{ form.surname() }}
+    <br>
+
+    <label for="email">Email:</label>
+    {{ form.email() }}
+    <br>
+
+    <label for="password">Password:</label>
+    {{ form.password() }}
+    <br>
+
+    <button type="submit">Register</button>
+</form>
+
+<!-- Вставьте любые другие элементы или структуру страницы, которые вам нужны -->
+
+</body>
+</html>
